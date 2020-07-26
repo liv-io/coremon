@@ -18,7 +18,7 @@ var versionCmd = &cobra.Command{
 	Use:   "version",
 	Short: "Show version information",
 	Long:  `
-Version shows detailed information about the build environment and
+The 'version' command shows detailed information about the build environment and
 the version of this software.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
