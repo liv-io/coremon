@@ -15,9 +15,9 @@ func init() {
 var version string = "0.0.0"
 
 var versionCmd = &cobra.Command{
-	Use:   "version",
+	Use: "version",
 	Short: "Show version information",
-	Long:  `
+	Long: `
 The 'version' command shows detailed information about the build environment and
 the version of this software.
 `,

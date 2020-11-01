@@ -7,11 +7,11 @@ import (
 )
 
 var infoCmd = &cobra.Command{
-	Use:   "info",
-	Aliases: []string{"in", "inf", "sh", "sho", "show"},
-	Short: "Show detailed information about a unit.",
+	Use: "info",
+	Aliases: []string{"inf", "in"},
+	Short: "Shows general system information",
 	Long: `
-The 'info' command shows detailed information about a unit.
+The 'info' command shows general information about the system.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(`KEY			VALUE

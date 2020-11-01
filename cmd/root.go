@@ -9,16 +9,13 @@ import (
 	"github.com/spf13/viper"
 )
 
-var (
-	cfgFile string
-	showVersion bool
-)
+var cfgFile string
 
 var rootCmd = &cobra.Command{
-	Use:   "coremon",
+	Use: "coremon",
 	Short: "Coremon monitors files, processes, sockets, network interfaces and other devices.",
-	Long:  `
-  _________  ________  ________  ____  ____ 
+	Long: `
+  _________  ________  ________  ____  ____
  / ___/ __ \/ ___/ _ \/ __  __ \/ __ \/ __ \
 / /__/ /_/ / /  /  __/ / / / / / /_/ / / / /
 \___/\____/_/   \___/_/ /_/ /_/\____/_/ /_/
@@ -41,6 +38,8 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.coremon.yaml)")
+
+	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
 // initConfig reads in config file and ENV variables if set.

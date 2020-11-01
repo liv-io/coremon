@@ -6,11 +6,12 @@ import (
 	"github.com/spf13/cobra"
 )
 
-var statusCmd = &cobra.Command{
-	Use:   "status",
-	Short: "Shows the overall status of the system and its resources.",
+var summaryCmd = &cobra.Command{
+	Use: "summary",
+	Aliases: []string{"su", "sum", "summ", "summa", "summar", "ov", "ove", "over", "overv", "overvi", "overvie", "overview"},
+	Short: "Shows an overview of the system status and resources.",
 	Long: `
-The 'status' command shows the overall state of the system and its resources.
+The 'summary' command shows an overview of the system status and resources.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println(`UNIT		TYPE		STATUS
@@ -35,19 +36,17 @@ lo: out		network		[                                       0.0Mbps]
 
 sda1		storage		[|||||||                                  17.2%]
 sda2		storage		[||||||||||||                             26.1%]
-sdb1		storage         [|||||||||||||||||||||||                  50.6%]
+sdb1		storage		[|||||||||||||||||||||||                  50.6%]
 
 coremon		service		OK
 openssh		service		OK
 chronyd		service		OK
 openntpd	service		OK
 opensmtpd	service		OK
-bitcoind	service		OK
-blockbook	service		OK
 `)
 	},
 }
 
 func init() {
-	rootCmd.AddCommand(statusCmd)
+	rootCmd.AddCommand(summaryCmd)
 }
