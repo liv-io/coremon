@@ -1,11 +1,11 @@
+# coremon
+
 <!-- shields.io -->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![BSD License][license-shield]][license-url]
-
-# coremon
 
 ## Index
 
@@ -46,7 +46,7 @@ This project is written in Go and has the following dependencies:
 
 ### Requirements
 
-This project is written in Go and has the following build requirements:
+This project has the following build requirements:
 * Git
 * Go
 
