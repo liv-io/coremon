@@ -22,6 +22,7 @@
 * [License](#license)
 * [Contact](#contact)
 * [Credits](#credits)
+* [Appendix](#appendix)
 
 ## About
 
