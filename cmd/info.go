@@ -3,41 +3,46 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/liv-io/coremon/lib/coremon"
+	"github.com/liv-io/coremon/lib/cpu"
+	"github.com/liv-io/coremon/lib/hostname"
+	"github.com/liv-io/coremon/lib/mem"
+	"github.com/liv-io/coremon/lib/os"
+	"github.com/liv-io/coremon/lib/sys"
+
 	"github.com/spf13/cobra"
 )
 
 var infoCmd = &cobra.Command{
-	Use: "info",
+	Use:     "info",
 	Aliases: []string{"inf", "in"},
-	Short: "Shows general system information",
+	Short:   "Shows system information",
 	Long: `
-The 'info' command shows general information about the system.
+The 'info' command shows information about the system.
 `,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println(`KEY			VALUE
+		fmt.Println("\n" + "Hostname		" + hostname.GetHostname("short"))
+		fmt.Println("FQDN			" + hostname.GetHostname("long") + "\n")
 
-Hostname		host01
-FQDN			host01.example.com
-IP Address		10.1.1.11
-Network			10.1.1.0/24
-Default Gateway		10.1.1.1
+		fmt.Println("IP Address		" + "10.1.1.11")
+		fmt.Println("Network			" + "10.1.1.0/24")
+		fmt.Println("Default Gateway		" + "10.1.1.1" + "\n")
 
-System Start Time	2020-07-01 08:34:02 UTC
-System Uptime		11 days 16 hours 38 minutes
+		fmt.Println("System Start Time	" + sys.GetBoottime())
+		fmt.Println("System Uptime		" + sys.GetUptime() + "\n")
 
-OS Name			CentOS
-OS Version		8.2.2004
-OS Architecture		x86_64
+		fmt.Println("OS Name			" + os.GetName())
+		fmt.Println("OS Version		" + os.GetVersion())
+		fmt.Println("OS Architecture		" + os.GetArchitecture() + "\n")
 
-Processor Sockets	1
-Processor Cores		4
+		fmt.Println("Processor Sockets	" + cpu.GetSockets())
+		fmt.Println("Processor Cores		" + cpu.GetCores() + "\n")
 
-Memory Size		8G
-Swap Size		2G
+		fmt.Println("Memory Size		" + mem.GetMemory())
+		fmt.Println("Swap Size		" + mem.GetSwap() + "\n")
 
-Coremon Start Time	2020-07-01 08:35:24 UTC
-Coremon Uptime		11 days 16 hours 37 minutes
-`)
+		fmt.Println("Coremon Start Time	" + coremon.GetStarttime())
+		fmt.Println("Coremon Uptime		" + coremon.GetUptime() + "\n")
 	},
 }
 
