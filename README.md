@@ -33,8 +33,9 @@ Coremon is an open-source monitoring tool designed for the Unix console. It aims
 ### Support
 
 Coremon currently supports the following Operating Systems:
-* CentOS >= 8.0
+* Debian >= 10.0
 * OpenBSD >= 6.8
+* FreeBSD >= 12.2
 
 ### Dependencies
 
@@ -68,7 +69,7 @@ See `LICENSE` file for more information.
 
 Author: l@liv.io
 
-Project: [Coremon](https://github.com/liv-io/coremon)
+Project: [Coremon](https://github.com/coremon/coremon)
 
 ## Credits
 
@@ -81,13 +82,13 @@ Acknowledgements:
 * [Htop](https://github.com/htop-dev/htop)
 
 <!-- shields.io -->
-[contributors-shield]: https://img.shields.io/github/contributors/liv-io/coremon.svg?style=flat
-[contributors-url]: https://github.com/liv-io/coremon/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/liv-io/coremon.svg?style=flat
-[forks-url]: https://github.com/liv-io/coremon/network/members
-[stars-shield]: https://img.shields.io/github/stars/liv-io/coremon.svg?style=flat
-[stars-url]: https://github.com/liv-io/coremon/stargazers
-[issues-shield]: https://img.shields.io/github/issues/liv-io/coremon.svg?style=flat
-[issues-url]: https://github.com/liv-io/coremon/issues
-[license-shield]: https://img.shields.io/github/license/liv-io/coremon.svg?style=flat
-[license-url]: https://github.com/liv-io/coremon/blob/master/LICENSE
+[contributors-shield]: https://img.shields.io/github/contributors/coremon/coremon.svg?style=flat
+[contributors-url]: https://github.com/coremon/coremon/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/coremon/coremon.svg?style=flat
+[forks-url]: https://github.com/coremon/coremon/network/members
+[stars-shield]: https://img.shields.io/github/stars/coremon/coremon.svg?style=flat
+[stars-url]: https://github.com/coremon/coremon/stargazers
+[issues-shield]: https://img.shields.io/github/issues/coremon/coremon.svg?style=flat
+[issues-url]: https://github.com/coremon/coremon/issues
+[license-shield]: https://img.shields.io/github/license/coremon/coremon.svg?style=flat
+[license-url]: https://github.com/coremon/coremon/blob/master/LICENSE
